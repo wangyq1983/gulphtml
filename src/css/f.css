@@ -1,0 +1,12 @@
+.fw{
+    width:1000px;
+    height:500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #333;
+}
+.fww{
+    width:130px; height: 130px; display: block; background: #f00; text-align: center; line-height: 100px;
+}

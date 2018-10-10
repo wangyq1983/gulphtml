@@ -1,0 +1,186 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-adv {
+  background-image: url(sprite.png);
+  background-position: 0px -268px;
+  width: 206px;
+  height: 790px;
+}
+.icon-adv_duilian {
+  background-image: url(sprite.png);
+  background-position: -206px -268px;
+  width: 201px;
+  height: 790px;
+}
+.icon-app_name_bg {
+  background-image: url(sprite.png);
+  background-position: -1728px -179px;
+  width: 3px;
+  height: 26px;
+}
+.icon-arrow {
+  background-image: url(sprite.png);
+  background-position: -1990px -129px;
+  width: 9px;
+  height: 5px;
+}
+.icon-b_123 {
+  background-image: url(sprite.png);
+  background-position: -1000px -129px;
+  width: 222px;
+  height: 379px;
+}
+.icon-banner_bg {
+  background-image: url(sprite.png);
+  background-position: -1000px -609px;
+  width: 2px;
+  height: 387px;
+}
+.icon-close_adv {
+  background-image: url(sprite.png);
+  background-position: -1895px -147px;
+  width: 12px;
+  height: 11px;
+}
+.icon-compere {
+  background-image: url(sprite.png);
+  background-position: -1522px -129px;
+  width: 157px;
+  height: 109px;
+}
+.icon-current {
+  background-image: url(sprite.png);
+  background-position: -1762px -257px;
+  width: 93px;
+  height: 63px;
+}
+.icon-head_bg {
+  background-image: url(sprite.png);
+  background-position: -1000px -508px;
+  width: 1000px;
+  height: 62px;
+}
+.icon-icon {
+  background-image: url(sprite.png);
+  background-position: -1648px -257px;
+  width: 114px;
+  height: 114px;
+}
+.icon-index_head_bg {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 1000px;
+  height: 268px;
+}
+.icon-link_img {
+  background-image: url(sprite.png);
+  background-position: -1855px -257px;
+  width: 5px;
+  height: 60px;
+}
+.icon-link_word {
+  background-image: url(sprite.png);
+  background-position: -1000px -607px;
+  width: 999px;
+  height: 2px;
+}
+.icon-logo {
+  background-image: url(sprite.png);
+  background-position: -1679px -129px;
+  width: 155px;
+  height: 50px;
+}
+.icon-main_bottom {
+  background-image: url(sprite.png);
+  background-position: -1679px -179px;
+  width: 49px;
+  height: 38px;
+}
+.icon-menu_cur {
+  background-image: url(sprite.png);
+  background-position: -1860px -257px;
+  width: 1px;
+  height: 52px;
+}
+.icon-p_icon {
+  background-image: url(sprite.png);
+  background-position: -1955px -129px;
+  width: 20px;
+  height: 15px;
+}
+.icon-p_icon_h {
+  background-image: url(sprite.png);
+  background-position: -1935px -129px;
+  width: 20px;
+  height: 15px;
+}
+.icon-s1234 {
+  background-image: url(sprite.png);
+  background-position: -1222px -129px;
+  width: 300px;
+  height: 128px;
+}
+.icon-search_select {
+  background-image: url(sprite.png);
+  background-position: -1834px -129px;
+  width: 61px;
+  height: 33px;
+}
+.icon-time {
+  background-image: url(sprite.png);
+  background-position: -1975px -129px;
+  width: 15px;
+  height: 15px;
+}
+.icon-top_banner {
+  background-image: url(sprite.png);
+  background-position: -1000px 0px;
+  width: 1000px;
+  height: 129px;
+}
+.icon-top_bg {
+  background-image: url(sprite.png);
+  background-position: -1000px -570px;
+  width: 1000px;
+  height: 37px;
+}
+.icon-video_box {
+  background-image: url(sprite.png);
+  background-position: -1435px -257px;
+  width: 213px;
+  height: 136px;
+}
+.icon-video_box_mask {
+  background-image: url(sprite.png);
+  background-position: -1222px -257px;
+  width: 213px;
+  height: 136px;
+}
+.icon-zan_icon {
+  background-image: url(sprite.png);
+  background-position: -1915px -129px;
+  width: 20px;
+  height: 18px;
+}
+.icon-zan_icon_h {
+  background-image: url(sprite.png);
+  background-position: -1895px -129px;
+  width: 20px;
+  height: 18px;
+}

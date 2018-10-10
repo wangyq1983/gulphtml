@@ -1,0 +1,1 @@
+var a={a:1,b:2,c:3};function aa(o){console.log("a"),console.log(o.b),console.log(o.a),console.log(o.c)}aa(a);

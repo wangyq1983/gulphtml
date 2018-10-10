@@ -1,0 +1,985 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>海马玩w1</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.7.1.min.js"></script>
+<script>
+$(function(){
+	$(".tj_app_list ul li").eq(4).find("img").css({ "width": "101px", "height": "101px" });
+	$(".tj_app_list ul li").eq(3).find("img").css({ "width": "94px", "height": "94px" });
+	$(".tj_app_list ul li").eq(5).find("img").css({ "width": "94px", "height": "94px" });
+	$(".tj_app_list ul li").eq(2).find("img").css({ "width": "88px", "height": "88px" });
+	$(".tj_app_list ul li").eq(6).find("img").css({ "width": "88px", "height": "88px" });
+	$(".tj_app_list ul li").eq(1).find("img").css({ "width": "82px", "height": "82px" });
+	$(".tj_app_list ul li").eq(7).find("img").css({ "width": "82px", "height": "82px" });
+	$(".tj_app_list ul li").hover(function(){
+		var index=$(this).index();
+		$(".tj_app_list ul li").find("img").css({ "width": "74px", "height": "74px" });
+		$(".tj_app_list ul li").eq(index).find("img").css({ "width": "101px", "height": "101px" });
+		$(".tj_app_list ul li").eq(index).next().find("img").css({ "width": "94px", "height": "94px" });
+		$(".tj_app_list ul li").eq(index).prev().find("img").css({ "width": "94px", "height": "94px" });
+		$(".tj_app_list ul li").eq(index).next().next().find("img").css({ "width": "88px", "height": "88px" });
+		$(".tj_app_list ul li").eq(index).prev().prev().find("img").css({ "width": "88px", "height": "88px" });
+		$(".tj_app_list ul li").eq(index).next().next().next().find("img").css({ "width": "82px", "height": "82px" });
+		$(".tj_app_list ul li").eq(index).prev().prev().prev().find("img").css({ "width": "82px", "height": "82px" });
+		$(".tj_app_list ul li").eq(index).next().next().next().next().find("img").css({ "width": "74px", "height": "74px" });
+		$(".tj_app_list ul li").eq(index).prev().prev().prev().prev().find("img").css({ "width": "74px", "height": "74px" });
+		})
+	$(".three dl:nth-child(3n)").css("margin","0");
+	$(".four dl:nth-child(4n)").css("margin","0");
+	$(".new_game_r .title span").hover(
+		function(){
+			$(this).addClass("hover").siblings().removeClass("hover");
+			var ss=$(this).index();
+			//alert(index);
+			$(".new_game_r .con ul").eq(ss).show().siblings().hide();
+			}
+		)
+	$(".hd_slide div").hover(function(){
+		$(this).addClass("hover").siblings().removeClass("hover");
+		var tt=$(this).index();
+		$(".hd_con ul").eq(tt).show().siblings().hide();
+		}
+		)
+	$(".hd_slide1 div").hover(function(){
+		$(this).addClass("hover").siblings().removeClass("hover");
+		var tt=$(this).index();
+		$(".hd_con1 ul").eq(tt).show().siblings().hide();
+		}
+		)
+	$(".yule_xh div").hover(function(){
+		$(this).addClass("hover").siblings().removeClass("hover");
+		var tt=$(this).index();
+		$(".four").eq(tt).show().siblings().hide();
+		}
+		)
+	$(".link_word ul li:nth-child(6n)").css("margin","0px");	
+	var adv_h=$(".adv").height();
+	var adv_h=adv_h+550;
+	$(".duilian_adv_left").css({ "left": "10px", "top": adv_h });
+	$(".duilian_adv_right").css({ "right": "10px", "top": adv_h });
+	$(".closed").click(function(){
+		$(".duilian_adv_left").remove();
+		$(".duilian_adv_right").remove();
+		})
+	$(".search_select").hover(
+		function(){
+			$(this).children("ul").show();
+			$(".search_select ul li").bind("click",function(){
+				var temp_val=$(this).text();
+				$(".search_select span").text(temp_val);
+				$(".search_select ul").hide();
+				})
+			},
+		function(){
+			$(this).children("ul").hide();
+			}
+		)	
+	})
+</script>
+</head>
+
+<body>
+<div class="top"></div>
+<div class="top1">
+<div class="top_box">
+    	<div class="t_menu">
+        	<a href="#">海马玩模拟器</a>
+            <a href="#">苹果助手</a>
+            <a href="#">安卓游戏</a>
+            <a href="#">苹果游戏</a>
+        </div>
+        <div class="t_info">注册海马玩，热门网游打折玩，独家礼包免费拿！</div>
+        <div class="t_login">
+        	<a href="#" class="reg">注册</a>
+            <a href="#" class="login">登录</a>
+        </div>
+    </div>
+</div>
+<div class="adv_bg">
+	
+	<a href="#a1" class="adv" style="height:775px; background:url(images/adv_bg.jpg) no-repeat top center;"></a>
+    <div class="duilian_adv_left"><div><span class="closed"></span><a href="#"><img src="images/adv.png" /></a></div></div>
+	<div class="duilian_adv_right"><div><span class="closed"></span><a href="#"><img src="images/adv.png" /></a></div></div>
+	<div class="main clearfix" style="margin-top:345px;">
+    	<div class="index_head">
+        	<div class="index_head_warp">
+            <div class="head">
+            		<a class="logo" href="http://www.haimawan.com"></a>
+                	<div class="menu">
+                    	<a href="#" class="cur">首页</a>
+                        <a href="#">新游</a>
+                        <a href="#">攻略</a>
+                        <a href="#">达人</a>
+                        <a href="#">娱乐</a>
+                        <a href="#">礼包</a><a href="#">活动</a><a href="#">专题</a><a href="#">排行</a>
+                    </div>
+                </div>
+            <div class="search">
+                	<div class="search_box">
+                    	<div class="search_select">
+                        	<span>游戏</span>
+                            <ul class="clearfix">
+                            	<li>游戏</li>
+                                <li>礼包</li>
+                                <li>活动</li>
+                            </ul>
+                        </div>
+                        <input type="text" class="search_input" />
+                    </div>
+                    <input name="" type="submit" class="search_btn" value="搜索" />
+            </div>
+            <div class="tj_app">
+            	<div class="tj_app_list">
+                	<ul>
+                    	<li><a href="#"><img src="images/icon.png" /></a></li>
+						<li><a href="#"><img src="images/icon.png" /></a></li>
+                        <li><a href="#"><img src="images/icon.png" /></a></li>
+                        <li><a href="#"><img src="images/icon.png" /></a></li>
+						<li><a href="#"><img src="images/icon.png" /></a></li>
+                        <li><a href="#"><img src="images/icon.png" /></a></li>
+                        <li><a href="#"><img src="images/icon.png" /></a></li>
+						<li><a href="#"><img src="images/icon.png" /></a></li>
+                        <li><a href="#"><img src="images/icon.png" /></a></li>
+                    </ul>
+                </div>
+                <div class="tj_app_name">
+                	<span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                    <span><a href="#">侠盗车手</a></span>
+                </div>
+            </div>
+            </div>
+        	<div class="index_head_bg"></div>
+        </div>
+        <div class="main_box clearfix">
+        	<div class="banner">
+            	<div class="i_banner">
+                	<div class="slider_box" id="slider_name">
+      <ul class="silder_con">		
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l"><img src="images/2012101623050497.jpg" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]《太极之从零开始》是由华谊兄弟出品，王中磊担任制片人、陈国富监制、冯德伦导演的电影《太极》三部曲中的第一部。该片已入围第69届威尼斯电影节非..</p>
+            </div>
+        </li>
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l"><img src="images/2012101623074142.jpg" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]庚子年，恰逢天象"四星合一"，预示改朝换代之征兆。曹操（周润发饰）的部属、尤其他的公子曹丕（邱心志饰），希望借此良机推献帝禅位、曹操登..</p>
+            </div>
+        </li>
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l" title="蝙蝠侠前传3黑暗骑士崛起"><img src="images/2012092600425434.jpg" title="蝙蝠侠前传3黑暗骑士崛起" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]本片是克里斯托弗·诺兰执导的"蝙蝠侠"系列三部曲的最终章。前两部分别是2005年的《蝙蝠侠：开战时刻》和2008年的《蝙蝠侠：黑暗骑士》。此片为20..</p>
+            </div>
+        </li>
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l"><img src="images/2012092600451002.jpg" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]影片设定在1998年，影片不再是只把焦点集中在爱丽丝这个角色身上，吉尔将在由安布雷拉（Umbrella）制造的僵尸潮的爆发中扮演重要角色。里昂·肯尼迪..</p>
+            </div>
+        </li>
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l"><img src="images/2012092600432575.jpg" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]2058年，考古学家在非洲挖掘出的古迹发现，人类是由一个进化程度更高的外星生物种族创造的。于是人们派出飞船"普罗米修斯号"前去外星"上帝"的星..</p>
+            </div>
+        </li>
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l"><img src="images/2012092600431140.jpg" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]敢死队2，由西蒙·韦斯特执导，主要讲述的是图尔"Tool"（米基·洛克饰演）在执行一项任务时被残忍杀害，以史泰龙为首的"敢死队"发誓为他报仇。与..</p>
+            </div>
+        </li>
+        <li class="silder_panel clearfix">
+       	  <a href="#" class="f_l"><img src="images/2012092600423387.jpg" /></a>
+          <div class="silder_intro f_r">
+            <p>[<strong>影片介绍</strong>]中缅两国边境毒品交易肆虐，云南小镇的缉毒警察（张默饰）无意中由杀手（杨坤饰）查到一条重大贩毒罪案线索，而一切迹象皆指向黑帮老大（孙红雷饰）..</p>
+            </div>
+        </li>
+       
+     
+      </ul>
+      <ul class="silder_nav clearfix">            
+        <li><a href="#"><img src="images/2012101623050497.jpg"/></a></li>    
+        <li><a href="#"><img src="images/2012101623074142.jpg"/></a></li>    
+        <li><a href="#"><img src="images/2012092600425434.jpg"/></a></li>    
+        <li><a href="#"><img src="images/2012092600451002.jpg"/></a></li>    
+        <li><a href="#"><img src="images/2012092600432575.jpg" /></a></li>    
+        <li><a href="#"><img src="images/2012092600431140.jpg"/></a></li>    
+        <li><a href="#"><img src="images/2012092600423387.jpg"/></a></li>    
+      </ul>
+    </div>
+                </div>
+                <div class="compere">
+                	<dl>
+                    	<dt><img src="images/compere.png" /></dt>
+                        <dd>主持人解说超级能量</dd>
+                    </dl>
+                    <dl>
+                    	<dt><img src="images/compere.png" /></dt>
+                        <dd>主持人解说超级能量</dd>
+                    </dl>
+                    <dl>
+                    	<dt><img src="images/compere.png" /></dt>
+                        <dd>主持人解说超级能量</dd>
+                    </dl>
+                    <dl>
+                    	<dt><img src="images/compere.png" /></dt>
+                        <dd>主持人解说超级能量</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="index_con clearfix">
+            	<div class="new_game clearfix">
+                	<div class="new_game_l">
+                    	<div class="title"><a href="#" class="more">更多></a>新游</div>
+                        <div class="g_video_list three">
+                        	<dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="new_game_r n_g_br">
+                    	<div class="title">
+                        	<span class="hover">最热视频</span>
+                            <span>最新视频</span>
+                        </div>
+                        <div class="con">
+                        	<ul>
+                            	<li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd><span class="play_sl">1233</span></dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                            </ul>
+                            <ul style="display:none">
+                            	<li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                                <li>
+                                	<a href="#"><img src="images/compere.png" />
+                                	<dl>
+                                    	<dt>我是传奇最新视频我是传奇最新视频我是传奇最新视频</dt>
+                                        <dd>更新时间：2015.2.23</dd>
+                                    </dl>
+                                	</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d4x_banner"><a href="#"><img src="images/d4x.jpg" /></a></div>
+                <div class="new_game clearfix">
+                	<div class="new_game_l clearfix">
+                    	<div class="title"><a href="#" class="more">更多></a>攻略</div>
+                        <div class="g_video_list three">
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div style="clear:both"></div>
+                        <div class="title" style="margin-top:20px"><a href="#" class="more">更多></a>达人</div>
+                        <div class="g_video_list three">
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="new_game_r">
+                    	<h3>热门活动</h3>
+                        <div class="right_hd">
+                        	<div class="hd_con">
+                            	<ul>
+                                	<li><a href="#"><img src="images/hd.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/hd.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                                <ul style="display:none">
+                                	<li><a href="#"><img src="images/compere.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/compere.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                                <ul style="display:none">
+                                	<li><a href="#"><img src="images/video_box.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/video_box.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                                <ul style="display:none">
+                                	<li><a href="#"><img src="images/d4x.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/d4x.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                            </div>
+                            <div class="hd_slide">
+                            	<div class="s_one hover"></div>
+                                <div class="s_two"></div>
+                                <div class="s_three"></div>
+                                <div class="s_four"></div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="margin-top:20px;">专题集锦</h3>
+                        <div class="right_hd">
+                        	<div class="hd_con1">
+                            	<ul>
+                                	<li><a href="#"><img src="images/hd.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/hd.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                                <ul style="display:none">
+                                	<li><a href="#"><img src="images/compere.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/compere.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                                <ul style="display:none">
+                                	<li><a href="#"><img src="images/video_box.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/video_box.png" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                                <ul style="display:none">
+                                	<li><a href="#"><img src="images/d4x.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                    <li><a href="#"><img src="images/d4x.jpg" /><div class="hd_info"></div><div class="hd_word"><h6>安装海马玩赢海马币</h6><span>活动时间:2015.2.15-2015.2.23</span></div></a></li>
+                                </ul>
+                            </div>
+                            <div class="hd_slide1">
+                            	<div class="s_one hover"></div>
+                                <div class="s_two"></div>
+                                <div class="s_three"></div>
+                                <div class="s_four"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_game clearfix" style="margin-top:20px; position:relative">
+                	<div class="new_game_l clearfix" style="width:984px;">
+                    	<div class="title">娱乐</div>
+                        <div class="ylbox">
+                        <div class="g_video_list four">
+                        	<dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="g_video_list four" style="display:none">
+                        	<dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与2爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="g_video_list four" style="display:none">
+                        	<dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量3的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                            <dl>
+                            	<a href="#" class="video_mask"></a>
+                                <span class="video_time">22:30</span>
+                            	<div class="video_box">
+                                	<img src="images/video_box.png" />
+                                </div>
+                            	<dt>超级能量的获取与爆发</dt>
+                                <dd>
+                                	<span class="play_sl">123</span><span class="zan_sl">123</span>
+                                </dd>
+                            </dl>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="yule_xh">
+                    	<div class="b_one hover"></div>
+                        <div class="b_two"></div>
+                        <div class="b_three"></div>
+                        <span class="gd"><a href="#">更多</a></span>
+                    </div>
+                </div>
+                
+          </div>
+        </div>
+        
+  <div class="link_img clearfix">
+        	<ul class="clearfix">
+            	<li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li>
+            	<li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li><li><a href="#"><img src="images/logo.png" /></a></li>
+            </ul>
+        </div>
+  <div class="link_word clearfix">
+        	<ul class="clearfix">
+            	<li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li>
+                            	<li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li>
+            	<li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li>
+            	<li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li>
+            	<li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li>
+            	<li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li><li><a href="#">友情链接词</a></li>
+
+            </ul>
+        </div>
+  </div>
+</div>
+<div class="foot">Copyright© <a href="#">www.haimawan.com</a> All Rights Reserved. </div>
+
+<script src="js/jquery.slides.js" type="text/javascript"></script>
+</body>
+</html>

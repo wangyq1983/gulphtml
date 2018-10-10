@@ -1,0 +1,25 @@
+$bgColor : #00f;
+$fColor: #fff;
+$h2Color: #000;
+$ttColor: #ccc;
+$fSize12: 18px;
+
+.sct1{
+  width:300px; height:200px; background:$bgColor ; display: flex;
+  h2{
+    color:$h2Color;
+    font-size: $fSize12;
+  }
+  span{
+    color:$fColor;
+    height:$fSize12;
+  }
+  h3{
+    color:$ttColor;
+    font-size: $fSize12;
+  }
+  h1{
+    color:#fff; font-size: 52px;
+  }
+}
+
